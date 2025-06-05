@@ -26,6 +26,7 @@ namespace PRA_B4_FOTOKIOSK.controller
             // Initializeer de lijst met fotos
             // WAARSCHUWING. ZONDER FILTER LAADT DIT ALLES!
             // foreach is een for-loop die door een array loopt
+            int i = 0;
             foreach (string dir in Directory.GetDirectories(@"../../../fotos"))
             {
                 /**
@@ -38,7 +39,8 @@ namespace PRA_B4_FOTOKIOSK.controller
                      * file string is de file van de foto. Bijvoorbeeld:
                      * \fotos\0_Zondag\10_05_30_id8824.jpg
                      */
-                    PicturesToDisplay.Add(new KioskPhoto() { Id = 0, Source = file });
+                    i += 1;
+                    PicturesToDisplay.Add(new KioskPhoto() { Id = i, Source = file });
                 }
             }
 
