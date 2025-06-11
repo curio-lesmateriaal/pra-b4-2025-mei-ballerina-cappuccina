@@ -11,7 +11,7 @@
 
             <TabItem Header="Foto's">
                 <Grid>
-                    <ScrollViewer Margin="100,38,10,43">
+                    <ScrollViewer Margin="10,38,10,43">
                         <WrapPanel x:Name="spPictures">
                         </WrapPanel>
                     </ScrollViewer>

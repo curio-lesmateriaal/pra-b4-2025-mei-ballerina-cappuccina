@@ -40,7 +40,10 @@ namespace PRA_B4_FOTOKIOSK.magie
 
         public static void SetSearchImageInfo(string text)
         {
-            Instance.lbSearchInfo.Content = text;
+            if (Instance != null)
+            {
+                //Instance.lbSearchInfo.Content = text;
+            }
         }
 
         public static string GetSearchImageInfo()

@@ -1,0 +1,70 @@
+A1 – Als bezoeker wil ik op het scherm alle foto’s zien, zodat ik mijn eigen actiefoto kan opzoeken en 
+het nummer kan doorgeven aan de kassa. - 🛠 Technische tip:  
+o Je hoeft niet te kijken naar de tijden. Toon simpelweg alle foto’s van vandaag. 
+o Pas de bestaande foreach loops aan en gebruik if statements om te filteren op naam. 
+o In C# kun je het dagnummer opvragen op deze manier (0 = Zondag t/m 6 = Zaterdag) 
+ var now = DateTime.Now;  
+ int day = (int)now.DayOfWeek; 
+o Zoek zelf op hoe je van de mapnaam zoals “2_Dinsdag” alleen het eerste stukje kunt 
+pakken, zodat je dit kunt vergelijken met het dagnummer van vandaag. 
+ 
+B4 – Eisenpakket sprint 1  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+B1 – Als klant wil ik een prijslijst hebben, en een dropdown in het formulier. Met kloppende prijzen en 
+beschrijvingen - 🛠 Technische tip:  
+o Bewerk de KioskProduct Class. Zodat deze een prijs en beschrijving heeft. 
+o Loop door middel van een foreach loop door de lijst met producten. En voeg deze toe 
+aan de prijslijst. 
+ foreach (KioskProduct product in ShopManager.Products)  
+ ShopManager.SetShopPriceList(“string”);  
+ ShopManager.AddShopPriceList(“string”);  
+ ShopManager.GetShopPriceList(“string”); 
+C1 – Als medewerker wil ik een product kunnen afrekenen door een foto-nummer, soort product. En 
+aantal in te voeren. De applicatie toont dan het totaalbedrag. Het soort product kies je vanuit een 
+dropdown. - 🛠 Technische tip: 
+o Bewerk de bon door de volgende methodes te gebruiken 
+ ShopManager.SetShopReceipt(“string”); 
+ ShopManager.AddShopReceipt(“string”); 
+ ShopManager.GetShopReceipt(); 
+o Haal de formulierdata op via: 
+ ShopManager.GetSelectedProduct(); 
+ ShopManager.GetFotoId(); 
+ ShopManager.GetAmount(); 
+
+A2 – Als bezoeker wil ik op het scherm alleen de foto’s zien die zijn genomen tussen 2 minuten
+geleden en 30 minuten geleden. (het duurt immers twee minuten om vanaf het camerapunt naar de
+winkel te komen).
+- 🛠 Technische tip:
+o Denk heel goed na over de voorwaarden waar een foto aan moet voldoen. Schrijf dit
+voor jezelf uit. Met andere woorden; hoe controleer je of de foto tussen de 2 en 30
+minuten geleden gemaakt is? Je kunt hiervoor de bestandsnaam gebruiken die je met
+.Split() in stukjes knipt zodat je de uren, minuten en seconden los kunt bekijken.
+o Je zou ook kunnen beginnen met de onder- en bovengrens qua tijd uitrekenen, en
+daarna pas nadenken over de vergelijking die je moet maken.
+B4 – Eisenpakket sprint 2
+B2 – Als medewerker wil ik meerdere producten op een kassabon kunnen zetten; het kiezen van
+fotonummer, product, en aantal blijft het zelfde werken. Alleen komt onder het eindbedrag nu een
+kassabon te staan met de gekozen producten.
+- 🛠 Technische tip:
+o Maak een class “OrderedProduct” aan waar je de eigenschappen van een product op de
+kassabon in kunt opslaan. (Fotonummer, ProductNaam, Aantal, Totaalprijs)
+
+C2 – Als leidinggevende wil ik dat de medewerker een bon kan opslaan naar een tekstbestand. Zodat
+ik de bon kan afdrukken en kan laten zien aan de klant.
+- 🛠 Technische tip:
+o Gebruik de File.WriteAllText() methode om dit te doen 
+
+logo
+more
+1
+
+Automatisch zoomen
+A3 –Als bezoeker wil ik allebei mijn foto’s naast elkaar zienop het scherm. Langs de baan staan twee camera’s die exact 60 seconden na elkaar een foto maken. In die tijd komen echter meerdere karretjes voorbij. Daardoor zie je op het scherm vaak jouw eerste foto, dan andere mensen, en daarna jouw tweede foto. Voorbeeld van de issue (rood zijn dezelfde mensen, en blauw zijn dezelfde mensen, deze moeten dus uiteindelijk naast elkaar worden getoond.) B4 – Eisenpakket sprint 3 B3 –Als bezoeker wil ik ook later op de dag nog mijn foto kunnen bestellen, als ik mij toch heb bedacht. Hiertoe moet de medewerker achter de kassa foto’s kunnen terugzoeken op dag en tijd. -🛠 Technische tip:  oGebruik dezelfde loops als bij A1 om te loopen door de fotos.oGebruik de methode SearchManager.GetSearchInput() om de input te krijgen (string)oGebruik de methode SearchManager.SetPicture(path) om de afbeelding te laten zienC3 –Als medewerker wil ik de informatie van deze afbeelding kunnen zien in een overzicht.-🛠 Technische tip: oSchrijf de afbeelding informate (id, tijd, datum) in een label. Gebruik hiervoor de SearchManager.SetSearchImageInfo(tekst) methode voor. 
