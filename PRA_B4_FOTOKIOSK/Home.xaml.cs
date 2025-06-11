@@ -36,6 +36,7 @@ namespace PRA_B4_FOTOKIOSK
             // Stel de manager in
             PictureManager.Instance = this;
             ShopManager.Instance = this;
+            SearchManager.Instance = this;
             ShopController.Window = this;
             PictureController.Window = this;
             SearchController.Window = this;

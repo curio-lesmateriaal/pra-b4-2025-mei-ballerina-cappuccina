@@ -35,7 +35,6 @@ namespace PRA_B4_FOTOKIOSK.magie
 
         public static string GetSearchInput()
         {
-            SearchManager.Instance = new Home();
             return Instance.tbZoeken.Text;
         }
 
@@ -43,7 +42,7 @@ namespace PRA_B4_FOTOKIOSK.magie
         {
             if (Instance != null)
             {
-                //Instance.lbSearchInfo.Content = text;
+                Instance.lbSearchInfo.Content = text;
             }
         }
 
