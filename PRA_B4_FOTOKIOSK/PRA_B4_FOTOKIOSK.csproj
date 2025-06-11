@@ -8,8 +8,32 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="fotos\" />
+    <Compile Remove="bonnen\NewFolder1\**" />
+    <Compile Remove="bonnen\NewFolder2\**" />
+    <Compile Remove="bonnen\NewFolder\**" />
+    <Compile Remove="NewFolder1\**" />
+    <Compile Remove="NewFolder\**" />
+    <EmbeddedResource Remove="bonnen\NewFolder1\**" />
+    <EmbeddedResource Remove="bonnen\NewFolder2\**" />
+    <EmbeddedResource Remove="bonnen\NewFolder\**" />
+    <EmbeddedResource Remove="NewFolder1\**" />
+    <EmbeddedResource Remove="NewFolder\**" />
+    <None Remove="bonnen\NewFolder1\**" />
+    <None Remove="bonnen\NewFolder2\**" />
+    <None Remove="bonnen\NewFolder\**" />
+    <None Remove="NewFolder1\**" />
+    <None Remove="NewFolder\**" />
+    <Page Remove="bonnen\NewFolder1\**" />
+    <Page Remove="bonnen\NewFolder2\**" />
+    <Page Remove="bonnen\NewFolder\**" />
+    <Page Remove="NewFolder1\**" />
+    <Page Remove="NewFolder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="bonnen\" />
+    <Folder Include="fotos\" />
+    <Folder Include="NewFolder2\" />
   </ItemGroup>
 
 </Project>
