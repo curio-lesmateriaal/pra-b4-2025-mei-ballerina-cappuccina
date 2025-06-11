@@ -128,10 +128,10 @@ namespace PRA_B4_FOTOKIOSK.controller
                 {
                     Directory.CreateDirectory(bonnenMap);
                 }
-                
+
                 // Genereer een unieke bestandsnaam met tijdstip
-                string bestandsnaam = $"{bonnenMap}/bon_{DateTime.Now:yyyyMMdd_HHmmss}.txt";
-                
+                string bestandsnaam = Path.Combine(bonnenMap, $"bon_{DateTime.Now:yyyyMMdd_HHmmss}.txt");
+
                 // Maak de inhoud van de bon
                 StringBuilder bonInhoud = new StringBuilder();
                 bonInhoud.AppendLine("FOTOKIOSK KASSABON");

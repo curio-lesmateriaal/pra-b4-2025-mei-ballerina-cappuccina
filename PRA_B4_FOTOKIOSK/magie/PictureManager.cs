@@ -27,9 +27,20 @@ namespace PRA_B4_FOTOKIOSK.magie
                     image.Source = bitmap;
                     image.Width = 1920 / 3.5;
                     image.Height = 1080 / 3.5;
-                Instance.spPictures.Children.Add(image);
+                    Instance.spPictures.Children.Add(image);
                     Console.WriteLine(picture);
                 }
+                foreach (KioskPhoto picture in PicturesToDisplay)
+                {
+                    Image image = new Image();
+                    var bitmap = pathToImage(picture.Source);
+                    image.Source = bitmap;
+                    image.Width = 500;
+                    image.Height = 400;
+                    Instance.picture1.Children.Add(image);
+                    Console.WriteLine(picture);
+                }
+
         }
 
         public static BitmapImage pathToImage(string path)
