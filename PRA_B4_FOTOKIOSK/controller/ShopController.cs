@@ -130,7 +130,7 @@ namespace PRA_B4_FOTOKIOSK.controller
                 }
 
                 // Genereer een unieke bestandsnaam met tijdstip
-                string bestandsnaam = $"bonnen/bon_{DateTime.Now:yyyyMMdd_HHmmss}.txt";
+                string bestandsnaam = $"C:/Users/georg/OneDrive/Documents/laragon/www/PRA/Blok B/B4-Fotokiosk/pra-b4-2025-mei-ballerina-cappuccina/PRA_B4_FOTOKIOSK/bonnen/bon_{DateTime.Now:yyyyMMdd_HHmmss}.txt";
 
                 // Maak de inhoud van de bon
                 StringBuilder bonInhoud = new StringBuilder();
